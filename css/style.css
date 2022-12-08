@@ -6,7 +6,7 @@ body {
 }
 
 .car_petya {
-    left: calc(100vw - 350px);
+    left: calc(100vw - 250px);
     top: 50vh;
     width: 200px;
     height: 150px;
@@ -197,7 +197,7 @@ body {
     }
 
     100% {
-        left: calc(100vw - 350px);
+        left: calc(100vw - 250px);
     }
 }
 
