@@ -1,0 +1,240 @@
+body {
+    background-image: url(../img/489d2190b37c9b7ce7bb.png);
+    background-repeat: no-repeat;
+    background-color: skyblue;
+    background-position: 0 32vh;
+}
+
+.car_petya {
+    left: calc(100vw - 350px);
+    top: 50vh;
+    width: 200px;
+    height: 150px;
+    position: relative;
+    animation-name: ride;
+    animation-duration: 10s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    /* transform: scale(150%); */
+}
+
+.part_petya {
+    position: absolute;
+}
+
+.part_petya:nth-child(2) {
+    width: 95px;
+    height: 0;
+    border-right: 37.5px solid transparent;
+    border-left: 37.5px solid transparent;
+    border-bottom: 75px solid gray;
+    top: calc(50% - 37.5px);
+    left: calc(50% - 83px);
+}
+
+.part_petya:nth-child(3) {
+    width: 150px;
+    height: 45px;
+    background-color: gray;
+    z-index: 2;
+    top: calc(50% - 7.5px);
+    left: calc(50% - 80px);
+}
+
+.human_petya {
+    width: 14px;
+    height: 14px;
+    border-radius: 100%;
+    background-color: rgb(213,172,129);
+    position: absolute;
+    top: calc(50% - 25px);
+    left: calc(50% - 39px);
+}
+
+.neck {
+    width: 5px;
+    height: 14px;
+    background-color: rgb(213,172,129);
+    position: absolute;
+    top: 12px;
+    left: 4.5px;
+}
+
+.eye1 {
+    width: 2px;
+    height: 2px;
+    background-color: black;
+    border-radius: 100%;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+
+.eye2 {
+    width: 2px;
+    height: 2px;
+    background-color: black;
+    border-radius: 100%;
+    position: absolute;
+    top: 5px;
+    left: 9px;
+}
+
+.part_petya:first-child {
+    background-color: gray;
+    width: 50px;
+    height: 45px;
+    top: calc(50% - 7.5px);
+    left: calc(50% - 99px);
+    border-top-left-radius: 15px;
+}
+
+.part_petya:last-child {
+    background-color: gray;
+    width: 50px;
+    height: 45px;
+    top: calc(50% - 7.5px);
+    left: calc(50% + 50px);
+    border-top-right-radius: 20px;
+}
+
+.window_petya {
+    position: absolute;
+    width: 42px;
+    height: 0;
+    top: calc(50% - 36px);
+}
+
+.window1_petya {
+    left: calc(50% - 59px);
+    border-left: 14px solid transparent;
+    border-bottom: 28px solid aqua;
+    animation-delay: 3s;
+    animation-name: window_open;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+}
+
+.window2_petya {
+    left: calc(50% + 7px);
+    border-right: 14px solid transparent;
+    border-bottom: 28px solid aqua;
+}
+
+.light_petya {
+    z-index: 3;
+    height: 14px;
+    width: 14px;
+    border-radius: 100%;
+    background-color: yellow;
+    position: absolute;
+    left: 185px;
+    top: calc(50% - 7px);
+    box-shadow: 0 0 5px 5px yellow;
+    animation-name: light;
+    animation-iteration-count: 5;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+}
+
+.back_light_petya {
+    z-index: 3;
+    height: 14px;
+    width: 14px;
+    border-radius: 100%;
+    background-color: red;
+    position: absolute;
+    left: 5px;
+    top: calc(50% - 7px);
+    animation-name: red_light;
+    animation-iteration-count: 5;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+}
+
+.weel_petya {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    background-color: black;
+    top: calc(50% + 15px);
+    z-index: 3;
+    animation-name: rotate;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: 5;
+}
+
+.weel1_petya {
+    left: calc(50% + 47px);
+}
+
+.weel2_petya {
+    left: calc(50% - 77px);
+}
+
+.disc_petya {
+    width: 6px;
+    height: 6px;
+    border-bottom: 12px gray solid;
+    border-top: 12px gray solid;
+    border-left: 12px darkgray solid;
+    border-right: 12px darkgray solid;
+    border-radius: 30px;
+    background-image: url(../img/Volkswagen_logo_2019.svg.png);
+    background-size: contain;
+    background-color: white;
+    position: absolute;
+    top: calc(50% - 15px);
+    left: calc(50% - 15px);
+}
+
+@keyframes ride {
+    0% {
+        left: -250px
+    }
+
+    100% {
+        left: calc(100vw - 350px);
+    }
+}
+
+@keyframes rotate {
+    50% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes light {
+    50% {
+        box-shadow: none;
+    }
+
+    100% {
+        box-shadow: 0 0 5px 5px yellow;
+    }
+}
+
+@keyframes red_light {
+    50% {
+        box-shadow: 0 0 5px 5px red;
+    }
+
+    100% {
+        box-shadow: none;
+    }
+}
+
+@keyframes window_open {
+    50% {
+        top: calc(50% - 6px);
+    }
+    100% {
+        top: calc(50% - 36px);
+    }
+}
